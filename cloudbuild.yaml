@@ -1,0 +1,6 @@
+# /cloudbuild.yaml
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'gcrio/test-project/first-image', '.']
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcrio/test-project/first-image', '.']
